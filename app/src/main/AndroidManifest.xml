@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- PERMISO PARA ACCEDER A INTERNET -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permisos para ubicación -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Permiso para estado de Wi-Fi -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Permiso para estado de Bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._113_4B_25092025"
         tools:targetApi="31">
-        
+
+        <!-- Clave de API de Google Maps -->
+        <!-- DEBES REEMPLAZAR "TU_API_KEY_DE_GOOGLE_MAPS" con tu clave de API real -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="TU_API_KEY_DE_GOOGLE_MAPS" />
+
         <!-- Pantalla de Carga (Splash) -->
         <activity
             android:name=".SplashActivity"
@@ -36,6 +52,11 @@
         <!-- Pantalla de Recuperar Contraseña -->
         <activity
             android:name=".RecuperarContraActivity"
+            android:exported="false" />
+            
+        <!-- Pantalla de Configuración -->
+        <activity
+            android:name=".SettingsActivity"
             android:exported="false" />
 
         <!-- ============================================= -->

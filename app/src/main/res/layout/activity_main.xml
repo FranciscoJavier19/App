@@ -15,12 +15,26 @@
         android:src="@drawable/fondo"
         android:alpha="0.9" />
 
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/purple"
+        android:contentDescription="Settings"
+        android:padding="16dp"
+        android:src="@android:drawable/ic_menu_manage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="20dp"
-        app:layout_constraintTop_toTopOf="@+id/fondoApp"
+        app:layout_constraintTop_toTopOf="@id/fondoApp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
 
@@ -81,7 +95,7 @@
                 </LinearLayout>
 
                 <EditText
-                    android:id="@+id/inputEmail"
+                    android:id="@+id/inputCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="fill"
@@ -109,8 +123,8 @@
                     android:id="@+id/botonPrincipal"
                     android:layout_width="145dp"
                     android:layout_height="37dp"
-                    android:backgroundTint="@color/purple"
                     android:layout_gravity="top|end"
+                    android:backgroundTint="@color/purple"
                     android:text="Iniciar sesión" />
 
                 <LinearLayout
